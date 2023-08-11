@@ -14,7 +14,8 @@ if (i != '9')
 putchar (',');
 putchar (',');
 {
-putchar('\n');
+++i;
 }
+putchar('\n');
 return (0);
 }
