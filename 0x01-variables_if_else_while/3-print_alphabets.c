@@ -1,23 +1,21 @@
 #include <stdio.h>
+
 /**
  * main - main point
+ *
  * Return : 0 (Success)
  */
 int main(void)
 {
-int lowerCase = 'a';
-int upperCase = 'A';
-while (lowerCase < = 'z')
-}
-putchar(lowerCase);
-lowerCase + = 1;
-{
-while (upperCase < = 'Z')
-}
-putchar(upperCase);
-upperCase + = 1;
-{
+char letter;
+
+for (letter = 'a'; letter <= 'z'; letter++)
+putchar(letter);
+
+for (letter = 'A'; letter <= 'Z'; letter++)
+putchar(letter);
+
 putchar('\n');
-}
+
 return (0);
 }
