@@ -1,17 +1,16 @@
 #include <stdio.h>
-#include <ctype.h>
 /**
 *main - a program that prints the alphabet in lowercase, followed by a new line
 *Return - 0 (Success)
 */
 int main(void)
 {
-int lowerCase = 'a';
-while (lowerCase < -'z')
+char alp[26] = "abcdefghijklmnopqrstuvwxyz";
+int i;
+for (i = 0 : i < 26; i++)
 }
-putchar(lowerCase);
-lowerCase += 1;
+putchar(alp[i]);
 }
 putchar ('\n');
-'return (0);
+return (0);
 }
