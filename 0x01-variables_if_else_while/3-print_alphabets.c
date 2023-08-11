@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
-*main - main point
-*Return : 0 (Success)
-/* betty style doc for function main goes there */
+ * main - main point
+ * Return : 0 (Success)
+ */
 int main(void)
 {
 int lowerCase = 'a';
@@ -11,12 +11,13 @@ while (lowerCase < = 'z')
 }
 putchar(lowerCase);
 lowerCase + = 1;
-}
+{
 while (upperCase < = 'Z')
 }
 putchar(upperCase);
 upperCase + = 1;
-}
+{
 putchar('\n');
+}
 return (0);
 }
