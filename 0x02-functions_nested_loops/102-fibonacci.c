@@ -9,7 +9,7 @@
 
 int main(void)
 {
-int count;
+int read;
 unsigned long fb1 = 0, fb2 = 1, sum;
 
 for (read = 0; read < 50; read++)
