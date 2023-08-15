@@ -13,7 +13,7 @@ unsigned long fb1 = 0, fb2 = 1, sum;
 unsigned long fb1_half1, fb1_half2, fb2_half1, fb2_half2;
 unsigned long half1, half2;
 
-for (num = 0; num < 92;num++)
+for (num = 0; num < 92; num++)
 {
 sum = fb1 + fb2;
 printf("%lu, ", sum);
