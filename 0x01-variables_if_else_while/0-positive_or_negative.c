@@ -3,11 +3,10 @@
 #include <stdio.h>
 
 /**
- * main - Entry point of the program
- * Description: Assigns a random number to the variable n and determines
- *              if it's zero, positive, or negative.
+ * main - Assigns a random number to the variable n
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 	int n;
@@ -24,7 +23,7 @@ int main(void)
 		printf("%d is %s\n", n, "positive");
 	}
 	else
-	{	
+	{
 		printf("%d is %s\n", n, "zero");
 	}
 
