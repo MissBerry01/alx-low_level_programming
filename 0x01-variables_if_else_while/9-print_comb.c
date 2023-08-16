@@ -1,8 +1,9 @@
 #include <stdio.h>
 /**
  * main - main point
- * Return : 0 (Success)
+ * Return: 0 (Success)
  */
+
 int main(void)
 {
 int i = '0';
