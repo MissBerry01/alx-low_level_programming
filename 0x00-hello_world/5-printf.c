@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - a C program that prints exactly with proper grammar, but the outcome is a piece of art, followed by a new line
+ * main - prints all possible different combinations of three digits.
  *
  * Return: 0 (Success)
  */
