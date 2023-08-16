@@ -3,12 +3,14 @@
 #include <stdio.h>
 /**
 * main - program prints the last digit of the number stored in the variable n
-* Return 0 (Success)
+* Return: 0 (Success)
 */
+
 int main(void)
 {
 int n;
 int lastnum;
+
 srand(time(0));
 n = rand() - RAND_MAX / 2;
 lastnum = n % 10;
