@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - main point
- * Return : 0 (Success)
+ * Return: 0 (Success)
  */
 int main(void)
 {
@@ -26,6 +26,6 @@ putchar(' ');
 }
 }
 }
-putchar('n');
+putchar(' ');
 return (0);
 }
