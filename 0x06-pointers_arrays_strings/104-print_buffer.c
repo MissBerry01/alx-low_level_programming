@@ -1,50 +1,50 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
- * print_buffer - Prints the content of a buffer
- * @b: The buffer to print
- * @size: The size of the buffer
+ * print_buffer - prints buffer
+ * @b: buffer
+ * @size: size
+ * Return: void
  */
+
 void print_buffer(char *b, int size)
 {
-unsigned char *ub = (unsigned char *)b;
-int i, j;
+	int a, j, i;
 
-if (size <= 0)
-{
-printf("\n");
-return;
-}
+	a = 0;
 
-for (i = 0; i < size; i += 10)
- {
-printf("%08x: ", i);
+	if (size <= 0)
+	{
+		printf("\n");
+		return;
+	}
+	while (a < size)
+	{
+		j = size - a < 10 ? size - a : 10;
+		printf("%08x: ", a);
+		for (i = 0; i < 10; i++)
+		{
+			if (i < j)
+				printf("%02x", *(b + a + i));
+			else
+				printf("  ");
+			if (i % 2)
+			{
+				printf(" ");
+			}
+		}
+		for (i = 0; i < j; i++)
+		{
+			int c = *(b + a + i);
 
-for (j = 0; j < 10; j++)
-{
-if (i + j < size)
-printf("%02x", ub[i + j]);
-else
-printf(" ");
-
-if (j % 2 == 1)
-printf(" ");
-}
-for (j= 0; j < 10; l++)
-{
-if (i + j < size)
-{
-if (ub[i + j] >= 32 && ub[i + j] <= 126)
-printf("%c", ub[i + j]);
-else
-printf(".");
-}
-else
-{
-printf(" ");
-}
-}
-
-printf("\n");
-}
+			if (c < 32 || c > 132)
+			{
+				c = '.';
+			}
+			printf("%c", c);
+		}
+		printf("\n");
+		a += 10;
+	}
 }
