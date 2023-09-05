@@ -8,5 +8,8 @@ int **alloc_grid(int width, int height);
 void free_grid(int **grid, int height);
 char *argstostr(int ac, char **av);
 char **strtow(char *str);
+void split_string(char *str, char **t, int check);
+int word_count(char *str);
+char *allocate_and_copy(char *word);
 
 #endif
