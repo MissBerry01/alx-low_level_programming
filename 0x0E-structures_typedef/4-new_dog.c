@@ -21,7 +21,7 @@ int _strlen(char *str)
 }
 
 /**
- * _strcopy  copies a string
+ * _strcopy -  copies a string
  * @dest: destination string
  * @src: source of the string
  * Return: pointer to dest
@@ -32,7 +32,6 @@ char *_strcopy(char *dest, char *src)
 
 	while (src[index])
 	{
-		
 		dest[index] = src[index];
 		index++;
 	}
