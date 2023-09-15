@@ -1,4 +1,5 @@
 #include "variadic_functions.h"
+#include <stdio.h>
 
 /**
  * print_all - prints anything based on the format string
@@ -7,42 +8,39 @@
 void print_all(const char * const format, ...)
 {
 va_list list;
-char *separator = "";
-unsigned int i = 0;
-int int_arg;
-double double_arg;
-char *str_arg;
+char *seps = "";
+unsigned int a = 0;
+
 va_start(list, format);
 
-while (format && format[i])
+while (format && format[a])
 {
-if (format[i] == 'c')
+char curnt_format = format[a];
+switch (curnt_format)
 {
-int_arg = va_arg(list, int);
-printf("%s%c", separator, int_arg);
-}
-else if (format[i] == 'i')
+case 'c':
+printf("%s%c", seps, va_arg(list, int));
+break;
+case 'i':
+printf("%s%d", seps, va_arg(list, int));
+break;
+case 'f':
+printf("%s%f", seps, va_arg(list, double));
+break;
+case 's':
 {
-int_arg = va_arg(list, int);
-printf("%s%d", separator, int_arg);
+char *str_args = va_arg(list, char *);
+if (!str_args)
+str_args = "(nil)";
+printf("%s%s", seps, str_args);
 }
-else if (format[i] == 'f')
-{
-double_arg = va_arg(list, double);
-printf("%s%f", separator, double_arg);
+break;
 }
-else if (format[i] == 's')
-{
-str_arg = va_arg(list, char *);
-if (!str_arg)
-str_arg = "(nil)";
-printf("%s%s", separator, str_arg);
+seps = ", ";
+a++;
 }
-separator = ", ";
-i++;
-}
-
 va_end(list);
 
 printf("\n");
 }
+
